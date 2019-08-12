@@ -1,0 +1,32 @@
+{
+  "name": "bookshelf-api-express-dynamodb",
+  "version": "1.0.0",
+  "description": "Bookshelf API using Express.js and AWS DynamoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symplcloud/bookshelf-api-express-dynamodb.git"
+  },
+  "keywords": [
+    "Cloud",
+    "Firestore"
+  ],
+  "author": "Sean Lee <yihsean@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/symplcloud/bookshelf-api-express-dynamodb/issues"
+  },
+  "homepage": "https://github.com/symplcloud/bookshelf-api-express-dynamodb#readme",
+  "dependencies": {
+    "aws-sdk": "^2.507.0",
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.12",
+    "express": "^4.17.1",
+    "nconf": "^0.10.0",
+    "ulid": "^2.3.0"
+  }
+}
