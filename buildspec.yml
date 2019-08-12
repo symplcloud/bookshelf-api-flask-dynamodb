@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build --tag bookshelf-api:latest .
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push 173729215222.dkr.ecr.us-east-2.amazonaws.com/bookshelf-api:latest
+      - printf '[{"name":"bookshelf-api","imageUri":"173729215222.dkr.ecr.us-east-2.amazonaws.com/bookshelf-api:latest"}]' > images.json
+artifacts:
+  files: images.json
+#   files: images.json
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
